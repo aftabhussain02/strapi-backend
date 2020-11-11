@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_kids",
+  "info": {
+    "name": "UserKid"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "user_kids",
+      "dominant": true
+    }
+  }
+}

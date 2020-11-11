@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todos",
+  "info": {
+    "name": "Todo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "eat",
+        "sleep",
+        "creativity"
+      ]
+    },
+    "points": {
+      "type": "integer"
+    },
+    "kid": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "progress": {
+      "type": "decimal"
+    }
+  }
+}
